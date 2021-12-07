@@ -32,6 +32,15 @@ class Stack:
             return False
         return self.top.data == elm
 
+    def print(self):
+        p_iter = self.top
+        s = ""
+        while p_iter != None:
+            s += str(p_iter.data) + " "
+            p_iter = p_iter.before
+        return s
+
+
 def test(sample, res):
     s = Stack()
     elms = "{}[]()"
